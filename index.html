@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Перевод с изображения</title>
+    <style>
+        body {
+            font-family: Arial ;
+            text-align: center;
+            margin-top: 75px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: inline-block;
+            text-align: left;
+        }
+
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Перевод текста с фотографии</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file"><br><br>
+        <label for="target_language">Выберите язык:</label>
+        <select name="target_language" id="target_language">
+            <option value="ru">Русский</option>
+            <option value="en">Английский</option>
+            <option value="de">Немецкий</option>
+            <option value="fr">Французский</option>
+            <option value="es">Испанский</option>
+            <option value="it">Итальянский</option>
+        </select> <br><br>
+        <input type="submit" value="Перевести">
+    </form>
+</body>
+</html>
