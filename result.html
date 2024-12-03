@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Результат перевода</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .column {
+            width: 45%;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: left;
+        }
+
+        .column h1 {
+            margin-bottom: 10px;
+        }
+
+        .column img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+
+        .column p {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="column">
+            <h1>Оригинальный текст:</h1>
+            <p>{{ original_text }}</p>
+            <img src="data:image/png;base64,{{ original_image }}" alt="Оригинал">
+        </div>
+        <div class="column">
+            <h1>Переведенный текст:</h1>
+            <p>{{ translated_text }}</p>
+            <img src="data:image/png;base64,{{ translated_image }}" alt="Перевод">
+        </div>
+    </div>
+</body>
+</html>
